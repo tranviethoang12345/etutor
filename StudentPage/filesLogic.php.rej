@@ -1,0 +1,9 @@
+diff a/MainProject/StudentPage/filesLogic.php b/MainProject/StudentPage/filesLogic.php	(rejected hunks)
+@@ -36,6 +36,7 @@
+          
+             if (mysqli_query($conn, $sql)) {
+                 echo "File uploaded successfully";
++                header('Location: uploadFile.php');
+             }
+         } else {
+             echo "Failed to upload file.";

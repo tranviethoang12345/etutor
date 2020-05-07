@@ -2,10 +2,10 @@
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 function ConnectToDatabase($sqlCommand){
 	
-	$servername = "127.0.0.1";
-	$database = "project";
-	$username = "root";
-	$password = "";
+	$servername = "sql12.freesqldatabase.com";
+	$database = "sql12338369";
+	$username = "sql12338369";
+	$password = "tTas7Lqynd";
 	
 	$conn = mysqli_connect($servername, $username, $password, $database);
 		
@@ -70,7 +70,7 @@ ConnectToDatabase ("UPDATE chat_message SET status = '0' WHERE from_user_id = '"
 
 function get_user_name($user_id)
 {
-$data =ConnectToDatabase( "SELECT username FROM Accounts WHERE id = '$user_id'");
+$data =ConnectToDatabase( "SELECT username FROM accounts WHERE id = '$user_id'");
 	if ($data->num_rows > 0) {
            $result =  $data->fetch_all(MYSQLI_ASSOC);
 		 foreach($result as $row)

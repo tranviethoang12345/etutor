@@ -1,6 +1,6 @@
 <?php 
     include '../Connection/Connection.php';
-    $databaseResponse = ConnectToDatabase("SELECT c.id AS classroom_id, t.fullname AS tutor_fullname, s.fullname AS student_fullname from Classrooms as c left join tutor_information AS t on t.id = c.tutor_id left join student_information AS s on s.id = c.student_id ORDER By tutor_fullname");
+    $databaseResponse = ConnectToDatabase("SELECT c.id AS classroom_id, t.fullname AS tutor_fullname, s.fullname AS student_fullname from classrooms as c left join tutor_information AS t on t.id = c.tutor_id left join student_information AS s on s.id = c.student_id ORDER By tutor_fullname");
 
     $databaseResponseGetTutors = ConnectToDatabase("SELECT id, fullname FROM tutor_information");
     $databaseResponseGetStudents = ConnectToDatabase("SELECT s.id as id, s.fullname as fullname, c.tutor_id as tutor_id from student_information as s

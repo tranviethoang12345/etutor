@@ -2,9 +2,9 @@
 include '../Connection/Connection.php';
 include 'filesLogic.php';
 
- $database = ConnectToDatabase("SELECT * from Tutor_Information where id =(select tutor_id from Classrooms where student_id = '".$_SESSION['id']."'  order by id DESC limit 1)");;
+ $database = ConnectToDatabase("SELECT * from tutor_information where id =(select tutor_id from classrooms where student_id = '".$_SESSION['id']."'  order by id DESC limit 1)");;
 
-   $database1 = ConnectToDatabase("    SELECT f.id as id, f.idtutor as tutor_id, s.fullname as tutor_name, f.Description as description, f.Comments as comments, f.name as filename, f.size as size, f.downloads as downloads from files as f left join Tutor_Information as s on s.id = f.idtutor where f.idtutor in (select tutor_id from Classrooms where student_id = '".$_SESSION['id']."')");
+   $database1 = ConnectToDatabase("    SELECT f.id as id, f.idtutor as tutor_id, s.fullname as tutor_name, f.Description as description, f.Comments as comments, f.name as filename, f.size as size, f.downloads as downloads from files as f left join tutor_information as s on s.id = f.idtutor where f.idtutor in (select tutor_id from classrooms where student_id = '".$_SESSION['id']."')");
 
 ?>
 

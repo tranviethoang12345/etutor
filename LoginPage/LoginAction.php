@@ -29,7 +29,7 @@
 			header('Location: ../StaffPage/index.php');
 		}
 		elseif ($role == "tutor") {
-			header('Location: ../tutorPage/index.php');
+			header('Location: ../TutorPage/index.php');
 		}
 		
 	}

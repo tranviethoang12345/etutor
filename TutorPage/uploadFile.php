@@ -4,8 +4,8 @@ include '../Connection/Connection.php';
 include 'filesLogic.php';
 $usernameOfUser =  $_SESSION["username"];
 
- $database = ConnectToDatabase("SELECT * from Student_Information where id in (select student_id from Classrooms where tutor_id = '".$_SESSION['id']."')");
-  $database1 = ConnectToDatabase(" SELECT f.id as id, f.idStudent as student_id, s.fullname as student_name, f.Description as description, f.Comments as comments, f.name as filename, f.size as size, f.downloads as downloads from files as f left join Student_Information as s on s.id = f.idStudent where f.idStudent in (select student_id from Classrooms where tutor_id = '".$_SESSION['id']."')");
+ $database = ConnectToDatabase("SELECT * from student_information where id in (select student_id from classrooms where tutor_id = '".$_SESSION['id']."')");
+  $database1 = ConnectToDatabase(" SELECT f.id as id, f.idStudent as student_id, s.fullname as student_name, f.Description as description, f.Comments as comments, f.name as filename, f.size as size, f.downloads as downloads from files as f left join student_information as s on s.id = f.idStudent where f.idStudent in (select student_id from classrooms where tutor_id = '".$_SESSION['id']."')");
 
 ?>
 <!DOCTYPE html>

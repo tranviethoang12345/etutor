@@ -2,10 +2,11 @@
 session_start();
 
  
-    $servername = "127.0.0.1";
-    $database = "project";
-    $username = "root";
-    $password = "";
+    $servername = "sql12.freesqldatabase.com";
+    $database = "sql12338369";
+    $username = "sql12338369";
+    $password = "tTas7Lqynd";
+    
     $conn = mysqli_connect($servername, $username, $password, $database);
 
 

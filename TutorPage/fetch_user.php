@@ -5,7 +5,7 @@
 include '../Connection/Connection.php';
 
 session_start();
-$dataMess = ConnectToDatabase("SELECT * from Student_Information where id in (select student_id from Classrooms where tutor_id = '".$_SESSION['id']."')");
+$dataMess = ConnectToDatabase("SELECT * from student_information where id in (select student_id from classrooms where tutor_id = '".$_SESSION['id']."')");
 
 
     $output = '

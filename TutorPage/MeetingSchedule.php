@@ -2,9 +2,9 @@
 session_start();
 $usernameOfUser =  $_SESSION["username"];
 include '../Connection/Connection.php';
-  $databaseResponseGetTutors =  ConnectToDatabase("SELECT * from tutor_information where id in (select tutor_id from classrooms where tutor_id = '".$_SESSION['id']."')");
+  $databaseResponseGetTutors =  ConnectToDatabase("SELECT * from tutor_information where id in (select tutor_id from Classrooms where tutor_id = '".$_SESSION['id']."')");
 
-    $databaseResponseGetStudents = ConnectToDatabase("SELECT * from student_information where id in (select student_id from classrooms where tutor_id = '".$_SESSION['id']."')");
+    $databaseResponseGetStudents = ConnectToDatabase("SELECT * from Student_Information where id in (select student_id from Classrooms where tutor_id = '".$_SESSION['id']."')");
 
 
 ?>
@@ -309,17 +309,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                <form role="form" method="post"  action="SendMail.php" >   
                         <div class="form-group">
                            <label>Tutor</label>
-                            <select class="form-control" id="tutor" name="tutor">
+                            <div class="form-control" id="Tutor" name="TutorTutor">
                                 <?php 
                                     if ($databaseResponseGetTutors->num_rows > 0) {
                                         $arr_tutor =  $databaseResponseGetTutors->fetch_all(MYSQLI_ASSOC);
                                         foreach($arr_tutor as $tutor) {
-                                            echo "<option value='".$tutor['fullname'] ."'> ".$tutor['fullname']."</option>";
+                                            echo "<option value='".$tutor['mail'] ."'>".$tutor['fullname']."</option>";
                                            
                                         }
                                     } 
                                  ?>
-                            </select>
+                            </div>
 
                         </div>
                         <div class="form-group">

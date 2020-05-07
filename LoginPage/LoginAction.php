@@ -4,7 +4,7 @@
 	$username = $_POST['userNameToLogin'];
 	$password = $_POST['passwordToLogin'];
 	$isMatchedAccount = false;
-	$databaseResponse = ConnectToDatabase("SELECT * FROM accounts");
+	$databaseResponse = ConnectToDatabase("SELECT * FROM Accounts");
 	if ($databaseResponse->num_rows > 0) {
 		while($row = $databaseResponse->fetch_assoc()) {
 			if ($username == $row["username"] && $password == $row["password"]){

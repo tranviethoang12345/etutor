@@ -5,7 +5,7 @@
 include '../Connection/Connection.php';
 
 session_start();
-$dataMess = ConnectToDatabase("SELECT * from tutor_information where id =(select tutor_id from classrooms where student_id = '".$_SESSION['id']."'  order by id DESC limit 1)");
+$dataMess = ConnectToDatabase("SELECT * from Tutor_Information where id =(select tutor_id from Classrooms where student_id = '".$_SESSION['id']."'  order by id DESC limit 1)");
     $output = '
     <table class="table table-bordered table-striped">
      <tr>

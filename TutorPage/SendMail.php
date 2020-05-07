@@ -9,10 +9,9 @@ $mail = new PHPMailer(TRUE);
 try {
    $name=$_POST['student'];
    $date=$_POST['date'];
-   $nameT =$_POST['tutor'];
 
    
-   $mail->setFrom('dannmgch16151@fpt.edu.vn', $nameT);
+   $mail->setFrom('dannmgch16151@fpt.edu.vn', 'Darth Vader');
    $mail->addAddress($name, 'Emperor');
 
    $mail->Subject = 'Force';

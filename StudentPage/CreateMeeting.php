@@ -1,7 +1,7 @@
 <?php
 session_start();
 include '../Connection/Connection.php';
- $database = ConnectToDatabase(" SELECT * from files where idtutor in (select tutor_id from Classrooms where  cstudent_id= '".$_SESSION['id']."') ")c
+ $database = ConnectToDatabase(" SELECT * from files where idtutor in (select tutor_id from Classrooms where  student_id= '".$_SESSION['id']."') ");
 
 ?>
 <!DOCTYPE html>

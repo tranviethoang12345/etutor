@@ -1,10 +1,10 @@
 <?php 
     include '../Connection/Connection.php';
-    $databaseResponseToGetClassrooms = ConnectToDatabase("SELECT * FROM classrooms");
+    $databaseResponseToGetClassrooms = ConnectToDatabase("SELECT * FROM Classrooms");
     // $databaseResponseToGetCount = ConnectToDatabase("SELECT COUNT(*) as count FROM Classrooms WHERE id = 15");
     // $row = $databaseResponseToGetCount->fetch_assoc();
     function getCount($idne){
-        $databaseResponseToGetCount = ConnectToDatabase("SELECT COUNT(*) as count FROM classmates WHERE class_id = $idne");
+        $databaseResponseToGetCount = ConnectToDatabase("SELECT COUNT(*) as count FROM Classmates WHERE class_id = $idne");
         $row = $databaseResponseToGetCount->fetch_assoc();
         return $row;
     }

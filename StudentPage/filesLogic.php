@@ -1,10 +1,10 @@
 <?php
 session_start();
    
-    $servername = "127.0.0.1";
-    $database = "project";
-    $username = "root";
-    $password = "";
+    $servername = "remotemysql.com";
+	$database = "9UlCBcEAwV";
+	$username = "9UlCBcEAwV";
+	$password = "sfmdmkJNiO";
     $conn = mysqli_connect($servername, $username, $password, $database);
 
 

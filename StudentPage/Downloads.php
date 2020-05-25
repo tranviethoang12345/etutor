@@ -1,9 +1,9 @@
-<?php   $servername = "sql12.freemysqlhosting.net";
-    
-    $servername = "127.0.0.1";
-    $database = "project";
-    $username = "root";
-    $password = "";
+<?php
+	$servername = "remotemysql.com";
+	$database = "9UlCBcEAwV";
+	$username = "9UlCBcEAwV";
+	$password = "sfmdmkJNiO";
+	
     $conn = mysqli_connect($servername, $username, $password, $database);
 if (isset($_GET['file_id'])) {
     $id = $_GET['file_id'];

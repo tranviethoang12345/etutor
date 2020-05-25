@@ -1,11 +1,10 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 function ConnectToDatabase($sqlCommand){
-	
-	$servername = "sql12.freesqldatabase.com";
-	$database = "sql12338369";
-	$username = "sql12338369";
-	$password = "tTas7Lqynd";
+	$servername = "remotemysql.com";
+	$database = "9UlCBcEAwV";
+	$username = "9UlCBcEAwV";
+	$password = "sfmdmkJNiO";
 	
 	$conn = mysqli_connect($servername, $username, $password, $database);
 		

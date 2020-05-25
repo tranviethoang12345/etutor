@@ -1,10 +1,10 @@
 <?php
 session_start();
-	$servername = "remotemysql.com";
-	$database = "9UlCBcEAwV";
-	$username = "9UlCBcEAwV";
-	$password = "sfmdmkJNiO";
-    
+	$servername = "sql12.freemysqlhosting.net";
+	$database = "sql12343107";
+	$username = "sql12343107";
+	$password = "ZZLeE1PWcd";
+	
     $conn = mysqli_connect($servername, $username, $password, $database);
 
 
